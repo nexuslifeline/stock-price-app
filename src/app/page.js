@@ -1,5 +1,5 @@
 import Head from "next/head";
-import StockPrice from "@/app/components/StockPrice";
+import StockPrice from "@components/StockPrice";
 
 export default function Home() {
   return (

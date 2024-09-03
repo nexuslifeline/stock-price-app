@@ -1,4 +1,4 @@
-import Spinner from "@/app/components/Common/Spinner";
+import Spinner from "@components/Common/Spinner";
 
 const Button = ({ children, isBusy, ...props }) => {
   return (

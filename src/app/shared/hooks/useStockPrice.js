@@ -7,7 +7,7 @@ import {
   FINNHUB_API_BASE_URL,
   FINNHUB_API_KEY,
   FINNHUB_API_VERSION
-} from "@/app/config/apiConfig";
+} from "@config/apiConfig";
 
 /**
  * Custom hook to fetch real-time stock prices using the Finnhub API.

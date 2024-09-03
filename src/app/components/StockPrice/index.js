@@ -2,11 +2,11 @@
 
 import { useState } from "react";
 
-import StockData from "@/app/components/StockPrice/StockData";
-import SkeletonLoader from "@/app/components/StockPrice/SkeletonLoader";
-import Button from "@/app/components/Common/Button";
-import SearchInput from "@/app/components/Common/SearchInput";
-import useStockPrice from "@/app/shared/hooks/useStockPrice";
+import StockData from "@components/StockPrice/StockData";
+import SkeletonLoader from "@components/StockPrice/SkeletonLoader";
+import Button from "@components/Common/Button";
+import SearchInput from "@components/Common/SearchInput";
+import useStockPrice from "@shared/hooks/useStockPrice";
 
 const StockPrice = () => {
   const [symbol, setSymbol] = useState("");
