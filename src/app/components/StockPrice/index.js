@@ -53,9 +53,13 @@ const StockPrice = () => {
           Search
         </Button>
       </div>
-      {loading && symbol && <SkeletonLoader />}
-      {error && symbol && <p className="text-red-500 mt-6 text-lg">{error}</p>}
-      {stockData && <StockData data={stockData} />}
+      {symbol && (
+        <>
+          {loading && <SkeletonLoader />}
+          {error && <p className="text-red-500 text-lg">{error}</p>}
+          {stockData && <StockData data={stockData} />}
+        </>
+      )}
     </div>
   );
 };
