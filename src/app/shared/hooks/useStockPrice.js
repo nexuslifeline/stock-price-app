@@ -45,7 +45,7 @@ const useStockPrice = () => {
   };
 
   const debouncedFetchStockPrice = useCallback(
-    debounce(fetchStockPrice, 500),
+    debounce(fetchStockPrice, 350),
     []
   );
 
@@ -53,6 +53,7 @@ const useStockPrice = () => {
     stockData,
     loading,
     error,
+    setError,
     fetchStockPrice: debouncedFetchStockPrice
   };
 };
