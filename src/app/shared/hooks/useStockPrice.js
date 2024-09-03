@@ -63,6 +63,7 @@ const useStockPrice = () => {
     loading,
     error,
     setError,
+    setStockData,
     fetchStockPrice: debouncedFetchStockPrice
   };
 };

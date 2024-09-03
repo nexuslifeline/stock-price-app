@@ -10,13 +10,14 @@ import useStockPrice from "@shared/hooks/useStockPrice";
 
 const StockPrice = () => {
   const [symbol, setSymbol] = useState("");
-  const { stockData, loading, error, fetchStockPrice, setError } =
+  const { stockData, loading, error, fetchStockPrice, setError, setStockData } =
     useStockPrice();
 
   const handleInputChange = e => {
     const inputValue = e.target.value.toUpperCase();
     setSymbol(inputValue);
     setError("");
+    setStockData(null);
   };
 
   const handleSearch = () => {
