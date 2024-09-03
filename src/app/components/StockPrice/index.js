@@ -6,6 +6,7 @@ import StockData from "@components/StockPrice/StockData";
 import SkeletonLoader from "@components/StockPrice/SkeletonLoader";
 import Button from "@components/Common/Button";
 import SearchInput from "@components/Common/SearchInput";
+import Alert from "@components/Common/Alert";
 import useStockPrice from "@shared/hooks/useStockPrice";
 
 const StockPrice = () => {
@@ -57,7 +58,7 @@ const StockPrice = () => {
       {symbol && (
         <>
           {loading && <SkeletonLoader />}
-          {error && <p className="text-red-500 text-lg">{error}</p>}
+          {error && <Alert message={error} type="error" />}
           {stockData && <StockData data={stockData} />}
         </>
       )}
