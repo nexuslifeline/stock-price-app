@@ -3,6 +3,12 @@ import { useState, useCallback } from "react";
 import axios from "axios";
 import debounce from "lodash/debounce";
 
+import {
+  FINNHUB_API_BASE_URL,
+  FINNHUB_API_KEY,
+  FINNHUB_API_VERSION
+} from "@/app/config/apiConfig";
+
 /**
  * Custom hook to fetch real-time stock prices using the Finnhub API.
  *
@@ -23,12 +29,15 @@ const useStockPrice = () => {
     setStockData(null);
 
     try {
-      const response = await axios.get(`https://finnhub.io/api/v1/quote`, {
-        params: {
-          symbol,
-          token: process.env.NEXT_PUBLIC_FINNHUB_API_KEY
+      const response = await axios.get(
+        `${FINNHUB_API_BASE_URL}${FINNHUB_API_VERSION}/quote`,
+        {
+          params: {
+            symbol,
+            token: FINNHUB_API_KEY
+          }
         }
-      });
+      );
 
       const data = response.data;
 
